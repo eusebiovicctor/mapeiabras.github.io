@@ -1,0 +1,145 @@
+/* ========= ESTILOS GERAIS ========= */
+body {
+    /* Seleciona o corpo inteiro do documento */
+    font-family: sans-serif;
+    /* Define uma fonte padrão mais genérica (pode ser substituída por uma mais específica se desejar) */
+    /* Bootstrap já define um bom sistema de fontes, então customizações aqui são opcionais */
+    padding-top: 0; /* Remove padding padrão que poderia existir */
+}
+
+/* Estilo para garantir que o conteúdo da seção não fique escondido atrás da navbar sticky */
+section {
+    /* Seleciona todos os elementos <section> */
+   /* padding-top: 70px; Ajuste este valor se a altura da sua navbar for diferente */
+   /* margin-top: -56px; Outra abordagem, usando margem negativa. A ID no link já faz o scroll parar no lugar certo com o pt-5 na section*/
+}
+
+
+/* ========= CABEÇALHO (HEADER) ========= */
+#cabecalho {
+    /* Seleciona o elemento com ID 'cabecalho' (o <header>) */
+    background-image: url('imagem-fundo.jpg');
+    /* Define a imagem de fundo. Certifique-se que 'imagem-fundo.jpg' está no lugar certo */
+    background-size: cover;
+    /* Faz a imagem de fundo cobrir toda a área do cabeçalho, cortando se necessário */
+    background-position: center center;
+    /* Centraliza a imagem de fundo horizontal e verticalmente */
+    background-repeat: no-repeat;
+    /* Evita que a imagem de fundo se repita */
+    /* Adicionar um overlay escuro pode ajudar na legibilidade do texto sobre a imagem */
+    /* position: relative; */ /* Necessário se for usar pseudo-elemento para overlay */
+}
+
+/* Exemplo de overlay (opcional): */
+/*
+#cabecalho::before {
+    content: ""; // Necessário para pseudo-elementos
+    position: absolute; // Posicionamento absoluto em relação ao #cabecalho
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Cor preta com 50% de opacidade
+    z-index: 1; // Garante que o overlay fique sobre a imagem de fundo
+}
+
+#cabecalho .container { // Garante que o conteúdo fique acima do overlay
+    position: relative; // Precisa de posicionamento para z-index funcionar
+    z-index: 2;
+}
+*/
+
+
+#logo {
+    /* Seleciona o elemento com ID 'logo' (a <img> da logo) */
+    max-width: 2000px;
+    width: 1000px;
+    /* Define a largura máxima da logo para não ficar excessivamente grande */
+    height: 250px;
+    /* Mantém a proporção da imagem ao redimensionar a largura */
+    border-radius: 10%; /* Opcional: Deixa a logo redonda se for quadrada */
+    /* background-color: rgba(255, 255, 255, 0.8); */ /* Opcional: Fundo levemente branco para destacar */
+    /* padding: 5px; */ /* Opcional: Pequeno espaçamento interno */
+}
+
+/* ========= NAVEGAÇÃO (NAVBAR) ========= */
+.navbar {
+    /* Seleciona todos os elementos com a classe 'navbar' */
+    /* Você pode adicionar estilos customizados para a navbar aqui se o Bootstrap não for suficiente */
+    /* Exemplo: border-bottom: 1px solid #dee2e6; */
+}
+
+.navbar-nav .nav-link.active {
+    /* Seleciona o link ativo ('active') dentro da navegação */
+    font-weight: bold; /* Deixa o texto do link ativo em negrito */
+}
+
+/* ========= CONTEÚDO PRINCIPAL (MAIN) ========= */
+main h2 {
+    /* Seleciona todos os H2 dentro do <main> */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior aos títulos de seção */
+    color: #343a40; /* Define uma cor um pouco mais escura para os títulos (opcional) */
+    border-bottom: 2px solid #0d6efd; /* Adiciona uma linha azul abaixo do título (cor primária do Bootstrap) */
+    padding-bottom: 0.5rem; /* Espaçamento entre o texto do título e a linha */
+    display: inline-block; /* Faz a linha ter a largura do texto */
+}
+
+main hr {
+    /* Seleciona todas as linhas horizontais <hr> dentro do <main> */
+    margin-top: 3rem; /* Aumenta a margem superior da linha horizontal */
+    margin-bottom: 3rem; /* Aumenta a margem inferior da linha horizontal */
+}
+
+.card {
+    /* Seleciona todos os cards Bootstrap */
+    border: none; /* Remove a borda padrão do card (opcional) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra suave (opcional) */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito hover */
+}
+
+.card:hover {
+    /* Efeito quando o mouse passa por cima do card */
+     transform: translateY(-5px); /* Move o card levemente para cima */
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Aumenta a sombra */
+}
+
+/* Estilizando links de contato e redes sociais na seção principal */
+#contato a, #redes a.btn {
+    /* Seleciona links dentro da seção contato e botões de rede na seção redes */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+}
+#contato a:hover, #redes a.btn:hover {
+     /* Efeito hover para os links */
+     text-decoration: underline; /* Adiciona sublinhado no hover (opcional) */
+}
+
+/* Ícones dentro dos links/botões principais */
+.social-links-main i {
+    /* Seleciona ícones dentro da div .social-links-main */
+    margin-right: 5px; /* Adiciona um pequeno espaço entre o ícone e o texto */
+}
+
+
+/* ========= RODAPÉ (FOOTER) ========= */
+footer {
+    /* Seleciona o elemento <footer> */
+    /* Estilos base já definidos via classes Bootstrap (bg-dark, text-white, etc) */
+}
+
+.footer-social-links a {
+    /* Seleciona os links de redes sociais dentro da div .footer-social-links no rodapé */
+    transition: opacity 0.3s ease;
+    /* Adiciona uma transição suave para o efeito hover */
+    text-decoration: none; /* Garante que não haja sublinhado */
+}
+
+.footer-social-links a:hover {
+    /* Efeito quando o mouse passa sobre os links sociais do rodapé */
+    opacity: 0.8;
+    /* Reduz levemente a opacidade para indicar interação */
+}
+
+.footer-social-links i {
+    /* Seleciona os ícones <i> dentro dos links sociais do rodapé */
+    /* O tamanho (fa-2x) foi definido no HTML, mas pode ser ajustado aqui se preferir */
+}
